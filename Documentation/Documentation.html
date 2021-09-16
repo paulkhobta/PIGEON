@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PIGEON 1.0: Documentation</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+        <header id='header'>
+            <h1>Guide for PIGEON - Free Graphics Editor</h1>
+        </header>
+        <div id='toc'>
+            <p><a class="navigation" href="#header">To the Top</a></p>
+            <p><a class="navigation" href="#getstarted">1. Get Started</a></p>
+            <p><a class="navigation" href="#drawing">2. Drawing</a></p>
+            <p><a class="navigation" href="#menu">3. Menu</a></p>
+            <p><a class="navigation" href="#browsersupport">4. Browser Support</a></p>
+            <p><a class="navigation" href="#footer">To the Bottom</a></p>
+        </div>
+        <section id='main'>
+            <article id='getstarted'>
+                <header>
+                    <h2>1. Get Started</h2>
+                </header>
+                <p>Welcome! Developer of the PIGEON appreciates your choice. PIGEON (version 1.0) is a free
+                    graphics editor written in JavaScript. You can use it to draw using lines of different width
+                    with the selected color. However, much more possibilities available. For example, you can change
+                    line transparency, draw in different mods (line drawing mode, fill mode), draw shapes, etc.
+                    About full list of features you can read in the <a href="#menu">"Menu"</a> section. Honestly,
+                    there aren't too many features, so you may ask a question: so why should I use this application?
+                    Below is an explanation.
+                </p>
+                <p>
+                    First, about the features. Yes, there aren't too many features. But it is a new application,
+                    only the first version. Many new features are awaiting you in the new version! Also, some features not
+                    so easy to implement because of JavaScript's and browsers' restrictions. For example,
+                    it is not possible to call usual Win32 "Save As" dialog window, so developer's only option is
+                    to use the browser's "Download" dialog for this aim. So, if you want to save file in
+                    different location than default, you should set appropriate changes in browser.
+                    Instruction for browsers:<br>
+                    - In Chrome click on three vertical dots <img src="chrome-menu-pic.jpg" alt="three dots in top right corner">
+                    in top right corner of the browser. A menu will be opened. Click on Settings -> then find in left side "Advanced" ->
+                    "Downloads", click on it. In this section you should find option "Ask where to save each file before downloading".
+                    Turn on this option. Now you can select location on each image save.<br>
+                    - In Edge click on three horizontal dots in top right corner of the browser. A menu will be opened. Click on Settings ->
+                    then find in left side "Downloads", click on it. Find an option "Ask me what to do with each download". Turn it on.<br>
+                    - In Opera click on logo in top left corner of the browser to open a menu. Click on Settings. Scroll to the bottom,
+                    open "Advanced" options. Scroll until you find "Download" section with option "Ask where to save each file before
+                    downloading". Turn it on.<br>
+                    - In Firefox click on button with three lines in top right corner of the browser. A menu will be opened. Click on Settings ->
+                    find "Downloads" section with two radio buttons. You should select radio button "Always ask you where to save files".
+                </p>
+                <p>
+                    Second, about simplicity. The tag line of the PIGEON is "Simple as the PIGEON". Some people associate word "simple" with word
+                    "primitive". But PIGEON is not primitive. It has original approach for drawing, which will be one of the most comfortable ways
+                    to draw (now non-perfect, but new versions will be better). At this moment user can freely draw on the canvas,
+                    but, if needed, new lines, shapes and text can be inserted using menu "Tools". All that user needs is to see the coordinates
+                    on the canvas using a mouse cursor or a touch (on devices with the touchscreen) and type them to appropriate in-app
+                    window from menu "Tools". Maybe now the application cannot offer too many features because of difficulties in the
+                    implementation, but using browser as a platform for running app gives one significant advantage: cross-platform support.
+                    So, if needed, this application may work on all operating systems including Windows, Linux, Android, MacOS and iOS.
+                    It is possible to draw using both a touchscreen and a mouse, so user can even use a mouse with the devices that use touchscreen.
+                    In such case message will be displayed, and a user can select draw mode: using the mouse or the touchscreen.
+                    So, this application have more features than you might think.
+                </p>
+                <p>
+                    To run the PIGEON you should open the file "PIGEON.html" in your browser. You will start with an empty canvas below and
+                    menu above.
+                </p>
+                <figure id="figure1">
+                    <img class="illustration" src="PIGEON in Firefox.jpg" alt="PIGEON's Start Screen in Firefox">
+                    <figcaption>PIGEON's Start Screen in Mozilla Firefox 89.0</figcaption>
+                </figure>
+                <p>
+                    From this point you have such options:<br>
+                    1. Start drawing image. Please be sure that you use suitable for your purpose line width. You can change line width in menu File ->
+                    Settings. Also there are other parameters, which can be changed: eraser width, alpha channels, different drawing modes, etc.
+                    To apply changes click on the "Apply" button. Detail description is in the <a href="#menu">"Menu"</a> section and in
+                    the <a href="#drawing">"Drawing"</a> section.<br>
+                    2. Insert image and edit from menu Tools -> Insert Image. If canvas width and/or canvas height is less than
+                    image width/height, then new canvas width and/or height will set. By default you insert an image starting from
+                    coordinates (0, 0). You can change these values to any you like (except for invalid values, such as negative numbers).<br>
+                    3. Insert line/shape and edit from menu "Tools".
+                </p>
+                <p>
+                    Some actions in the PIGEON require coordinates. The start point of the coordinate system with value (0, 0) is located in top
+                    left corner of the canvas. Horizontal axis - X,  vertical axis - Y. Positive X values - to the right, positive Y values - to
+                    the down. You can get X and Y values in the menu bar on the right side from the menu. First number is X value,
+                    second number - Y value.
+                </p>
+            </article>
+            <article id='drawing'>
+                <header>
+                    <h2>2. Drawing</h2>
+                </header>
+                <p>
+                    You can start drawing right from the moment the PIGEON is loaded. Or you may insert image, text, line, shape, then edit.
+                    To draw simply click and hold left mouse button pushed. While pushed move mouse to draw line, curve or what you like.
+                    To erase click and hold right mouse button pushed. While pushed move mouse to areas, which should to be erased.
+                    If you want to change line width, eraser width or something else that will influence on drawing process, go to File -> Settings.
+                </p>
+                <figure id="figure2">
+                    <img class="illustration" src="in-app-settings.jpg" alt="in-app settings">
+                    <figcaption>In-app settings. At the top of the window is a move area (if user wants to move window, he clicks on the area
+                        and move window with a mouse; second mouse click causes exit from the moving mode)</figcaption>
+                </figure>
+            </article>
+            <article id='menu'>
+                <header>
+                    <h2>3. Menu</h2>
+                </header>
+                <p>
+                    In-app menu offers user useful features. Here they are:<br>
+                    1. Menu "File" consists of two elements: "Save As" and "Settings".<br>
+                    Clicking on "Save As" calls in-app "Save As" dialog. To save file user should name it.<br>
+                    Going to File -> Settings cause displaying settings. "Settings" window is shown on figure above.
+                </p>
+                <figure id="figure3">
+                    <img class="illustration" src="menu-File.jpg" alt="elements of the menu File">
+                    <figcaption>menu File</figcaption>
+                </figure>
+                <p>
+                    2. Menu "Edit" has three elements:<br>
+                    If you need to quickly clear the canvas, then just click on "Clear".<br>
+                    Other two elements "Undo Changes" and "Redo Changes" are known for their presence in all the editors.
+                </p>
+                <figure id="figure4">
+                    <img class="illustration" src="menu-Edit.jpg" alt="menu Edit elements">
+                    <figcaption>menu Edit</figcaption>
+                </figure>
+                <p>
+                    3. Menu "Tools" is used for inserting images, lines, text, shapes.<br>
+                    In this menu is also available the ruler. You can move ruler just by clicking on it. Click another time and you will exit
+                    the moving mode.
+                </p>
+                <figure  id="figure5">
+                    <img class="illustration" src="menu-Tools.jpg" alt="menu Tools elements">
+                    <figcaption>menu Tools</figcaption>
+                </figure>
+                <p>
+                    4. Menu "Effects" may offer only three effects.<br>
+                    Newer versions will have more effects
+                </p>
+                <figure id="figure6">
+                    <img class="illustration" src="menu-Effects.jpg" alt="menu Effects elements">
+                    <figcaption>menu Effects</figcaption>                    
+                </figure>
+                <p>
+                    5. Thanks to the menu "Help" you can access this documentation every time you need just from the PIGEON.<br>
+                    Also you can check brief information about the PIGEON in "About".
+                </p>
+                <figure id="figure7">
+                    <img class="illustration" src="menu-Help.jpg" alt="menu Help elements">
+                    <figcaption>menu Help</figcaption>
+                </figure>
+            </article>
+            <article id='browsersupport'>
+                <header>
+                    <h2>4. Browser Support</h2>
+                </header>
+                <p>
+                    The PIGEON graphics editor tested in multiple browsers: Mozilla Firefox, Opera, Chrome, Edge, Opera Mobile,
+                    and Chrome for Android. Before writing all the code aim was set to cover as much user browsers (and their versions)
+                    as possible, so JavaScript features have been carefully analyzed before they was used. According to information from
+                    <a href="https://caniuse.com/" target="_blank">"Can I Use"</a> site which show browser support tables at least 93% of the users
+                    worldwide can run the PIGEON on their browsers. Supported browsers:<br>
+                    <ul id='supportlist'>
+                        <li>Edge</li>
+                        <li>Firefox</li>
+                        <li>Chrome</li>
+                        <li>Safari</li>
+                        <li>Opera</li>
+                        <li>Safari on iOS</li>
+                        <li>Android Browser</li>
+                        <li>Opera Mobile</li>
+                        <li>Chrome for Android</li>
+                        <li>Firefox for Android</li>
+                        <li>Samsung Internet</li>
+                    </ul>
+                </p>
+                <p>
+                    If you find any bug, please tell the developer, so that he can fix it quickly. The developer will make changes as soon as possible.
+                </p>
+                <figure id="figure8">
+                    <img class="illustration" src="picture-demo.jpg" alt="demo picture">
+                    <figcaption>Developer of the PIGEON wishes you successful drawing!</figcaption>
+                </figure>
+            </article>
+        </section>
+        <footer id='footer'>
+            <p>
+                <img src="pigeon-logo.ico" alt="PIGEON logo"> PIGEON (version 1.0). &#169; Developed by Paul Khobta. Licensed under the terms of the <a href="LICENSE.txt" target="_blank">GNU General Public License v3</a>. 
+                Used Liberation Serif Font Family <a href="../Fonts/SIL Open Font License.txt" target="_blank">(SIL Open Font License, Version 1.1)</a>.
+            </p>
+        </footer>
+        <script>
+            window.onload = function () {
+                var navigation = document.getElementsByClassName('navigation'),
+                navPositions = [];
+
+                function detectScroll () {
+                    var highlighted, evt = {};
+
+                    for (let i = 0; i < navigation.length - 1; i++) {
+                        if (pageYOffset < navPositions[i + 1] && pageYOffset >= navPositions[i]) {
+                            highlighted = navigation[i];
+                        }
+                    }
+
+                    if (Math.floor(pageYOffset + window.innerHeight) === Math.floor(document.body.getBoundingClientRect().height)) {
+                        highlighted = navigation[navigation.length - 1];
+                    }
+
+                    evt.target = highlighted;
+                    highlightNav(evt);
+                }
+
+                function highlightNav (evt) {
+                    for (let i = 0; i < navigation.length; i++) {
+                        if (navigation[i] !== evt.target) {
+                            if (navigation[i].id === 'nav-choice') {
+                                navigation[i].id = 'not-choice';
+                            }
+                        }
+                    }
+
+                    evt.target.id = 'nav-choice';
+                }
+
+                for (let i = 0; i < navigation.length; i++) {
+                    navPositions[i] = pageYOffset + document.getElementById(navigation[i].href.split('#')[1]).getBoundingClientRect().top;
+                    navigation[i].onclick = highlightNav;
+                }
+
+                window.onscroll = detectScroll;
+            }
+        </script>
+    </body>
+</html>

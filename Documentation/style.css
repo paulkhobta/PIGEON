@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Liberation Serif";
+    src: url(../Fonts/LiberationSerif-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Liberation Serif";
+    src: url(../Fonts/LiberationSerif-Italic.ttf) format("truetype");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Liberation Serif";
+    src: url(../Fonts/LiberationSerif-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Liberation Serif";
+    src: url(../Fonts/LiberationSerif-BoldItalic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: bold;
+}
+
+html {
+    background-color: #9490a333;
+}
+
+body {
+    margin: 0;
+    background-color: #9490a309;
+    min-height: 100vh;
+}
+
+#header {
+    background-color: #9490a319;
+    height: 80px;
+    line-height: 2.2;
+    position: relative;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, #toc p {
+    text-align: center;
+    font-family: 'Liberation Serif', 'Times New Roman', Times, serif;
+}
+
+.navigation:hover, #nav-choice {
+    border: 1px solid black;
+    border-image: url("border.svg") 18 round;
+    border-width: 10px;
+    color: rgb(1, 134, 7);
+}
+
+a:visited {
+    color: blue;
+}
+
+#toc {
+    width: 150px;
+    height: 300px;
+    border-image: url('border.svg') 23 round;
+    border-style: solid;
+    border-width: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 15px;
+    margin-top: 20vh;
+    top: 0;
+    float: left;
+}
+
+#main {
+    margin-top: 20px;
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    background-image: linear-gradient(to bottom, #9490a319 40%, #5e816119 60%);
+    position: relative;
+}
+
+article p {
+    padding: 10px;
+    font-family: 'Liberation Serif', 'Times New Roman', 'Times', serif;
+    font-size: 14Pt;
+}
+
+figure {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Liberation Serif', 'Times New Roman', 'Times', serif;
+    font-size: 14Pt;
+    border-width: 10px;
+    border-style: solid;
+    border-image: url("border-figure.svg") 18 round;
+}
+
+#figure1 {
+    width: 50%;
+}
+
+#figure2 {
+    width: 35%;
+}
+
+#figure3, #figure4, #figure5, #figure6, #figure7 {
+    width: 15%;
+}
+
+#figure8 {
+    width: 50%;
+}
+
+.illustration {
+    width: 100%;
+}
+
+#supportlist {
+    list-style-type: '- ';
+    font-family: 'Liberation Serif', 'Times New Roman', Times, serif;
+    font-size: 14Pt;
+}
+
+#supportlist li {
+    padding: 5px;
+}
+
+footer {
+    background-color: #9490a319;;
+    border-style: solid;
+    border-width: 10px;
+    border-image: url("border-figure.svg") 18 round;
+    text-align: center;
+    font-family: 'Liberation Serif', 'Times New Roman', Times, serif;
+    font-size: 12Pt;
+    font-weight: bold;
+}
